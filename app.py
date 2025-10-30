@@ -10,7 +10,6 @@ def fetch_page(url):
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
-        # Ensure UTF-8 decoding (avoids symbols like Ã‚Â£)
         response.encoding = 'utf-8'
         return response.text
     except requests.exceptions.RequestException as e:
@@ -78,3 +77,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
