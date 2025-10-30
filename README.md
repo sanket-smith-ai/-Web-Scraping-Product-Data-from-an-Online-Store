@@ -1,7 +1,5 @@
 ##  Web Scraping Product Data from an Online Store (Books to Scrape)
 
----
-
 ## Project Overview
 
 This project is a **Python-based web scraping assignment** that extracts product data from the public website
@@ -86,7 +84,7 @@ python app.py
 
 ## Important Notes
 
-* Do **not** keep `books.csv` open in Excel while running the script — it locks the file.
+* Do not keep `books.csv` open in Excel while running the script — it locks the file.
 * The script adds a short delay (`time.sleep(1)`) between requests to ensure **polite scraping**.
 * Uses only **allowed libraries** — no Selenium, APIs, or browser automation.
 * You can scrape more pages by updating the variable **`pages_to_scrape`** inside the script.
@@ -101,6 +99,3 @@ python app.py
 **Libraries Used:** requests, BeautifulSoup, csv
 **Website Scraped:** [https://books.toscrape.com/](https://books.toscrape.com/)
 
----
-
-Would you like me to add a **short “Approach & Assumptions” section** (2–3 lines) at the end to strengthen your README for the recruiter?
