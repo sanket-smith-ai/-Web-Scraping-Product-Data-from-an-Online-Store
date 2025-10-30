@@ -43,7 +43,7 @@ def save_to_csv(data, filename="books.csv"):
     new_data = [row for row in data if row[0] not in existing_titles]
 
     if not new_data:
-        print("⚠️ No new unique records found. Skipping write.")
+        print(" No new unique records found. Skipping write.")
         return
 
 
@@ -53,7 +53,7 @@ def save_to_csv(data, filename="books.csv"):
             writer.writerow(["Title", "Price", "Availability"])
         writer.writerows(new_data)
 
-    print(f"✅ Added {len(new_data)} unique new records to '{filename}'.")
+    print(f"Added {len(new_data)} unique new records to '{filename}'.")
 
 
 def main():
@@ -62,7 +62,7 @@ def main():
 
     for page_num in range(1, pages_to_scrape + 1):
         url = BASE_URL.format(page_num)
-        print(f"Scraping page {page_num}: {url}")
+        print(f" Scraping page {page_num}: {url}")
 
         html = fetch_page(url)
         if not html:
@@ -73,8 +73,9 @@ def main():
         time.sleep(1) 
 
     save_to_csv(all_books)
-    print(f"\n✅ Scraping complete! {len(all_books)} books saved to 'books.csv'.")
+    print(f"\n Scraping complete! {len(all_books)} books saved to 'books.csv'.")
 
 if __name__ == "__main__":
     main()
+
 
